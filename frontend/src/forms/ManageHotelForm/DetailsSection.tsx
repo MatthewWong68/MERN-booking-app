@@ -10,7 +10,7 @@ const DetailsSection = () => {
     return (
         <div className="flex flex-col gap-4">
             <h1 className="text-3xl font-bold mb-3">Add Hotel</h1>
-            <label className="text-gray-700 text-sm fonr-bold flex-1">
+            <label className="text-gray-700 text-sm font-bold flex-1">
                 Name
                 <input
                     type="text"
@@ -22,7 +22,7 @@ const DetailsSection = () => {
                 )}
             </label>
             <div className="flex gap-4">
-                <label className="text-gray-700 text-sm fonr-bold flex-1">
+                <label className="text-gray-700 text-sm font-bold flex-1">
                     City
                     <input
                         type="text"
@@ -33,7 +33,7 @@ const DetailsSection = () => {
                         <span className="text-red-500">{errors.city.message}</span>
                     )}
                 </label>
-                <label className="text-gray-700 text-sm fonr-bold flex-1">
+                <label className="text-gray-700 text-sm font-bold flex-1">
                     Country
                     <input
                         type="text"
@@ -45,7 +45,7 @@ const DetailsSection = () => {
                     )}
                 </label>
             </div>
-            <label className="text-gray-700 text-sm fonr-bold flex-1">
+            <label className="text-gray-700 text-sm font-bold flex-1">
                 Description
                 <textarea
                     rows={10}
@@ -56,7 +56,7 @@ const DetailsSection = () => {
                     <span className="text-red-500">{errors.description.message}</span>
                 )}
             </label>
-            <label className="text-gray-700 text-sm fonr-bold max-w-[50%]">
+            <label className="text-gray-700 text-sm font-bold max-w-[50%]">
                 Price Per Night
                 <input
                     type="number"
@@ -68,7 +68,7 @@ const DetailsSection = () => {
                     <span className="text-red-500">{errors.pricePerNight.message}</span>
                 )}
             </label>
-            <label className="text-gray-700 text-sm fonr-bold max-w-[50%]">
+            <label className="text-gray-700 text-sm font-bold max-w-[50%]">
                 Star Rating
                 <select 
                     {...register("starRating", {
