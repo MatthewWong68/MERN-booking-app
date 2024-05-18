@@ -57,8 +57,8 @@ test("should book hotel", async ({ page }) => {
 
     const stripeFrame = page.frameLocator("iframe").first();
     await stripeFrame
-    .locator('[placeholder="Card number"]')
-    .fill("4242424242424242");
+        .locator('[placeholder="Card number"]')
+        .fill("4242424242424242");
     await stripeFrame.locator('[placeholder="MM / YY"]').fill("05/30");
     await stripeFrame.locator('[placeholder="CVC"]').fill("242");
     await stripeFrame.locator('[placeholder="ZIP"]').fill("24242");
