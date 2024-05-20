@@ -9,9 +9,11 @@ export const fetchCurrentUser = async (): Promise<UserType> => {
     const response = await fetch(`${API_BASE_URL}/api/users/me`, {
         credentials: "include"
     })
+
     if (!response.ok) {
         throw new Error("Error fetching user");
     }
+    
     return response.json();
 };
 
@@ -145,6 +147,7 @@ export const searchHotels = async (
     searchParams: SearchParams
   ): Promise<HotelSearchResponse> => {
     const queryParams = new URLSearchParams();
+
     queryParams.append("destination", searchParams.destination || "");
     queryParams.append("checkIn", searchParams.checkIn || "");
     queryParams.append("checkOut", searchParams.checkOut || "");
@@ -175,8 +178,19 @@ export const searchHotels = async (
 
 export const fetchHotelById = async (hotelId: string): Promise<HotelType> => {
     const response = await fetch(`${API_BASE_URL}/api/hotels/${hotelId}`);
+
     if (!response.ok) {
         throw new Error("Error fetching Hotels");
+    }
+
+    return response.json();
+};
+
+export const fetchHotels = async (): Promise<HotelType[]> => {
+    const response = await fetch(`${API_BASE_URL}/api/hotels`);
+
+    if (!response.ok) {
+        throw new Error("Error fetching hotels")
     }
 
     return response.json();
