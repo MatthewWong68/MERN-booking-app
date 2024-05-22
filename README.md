@@ -1,9 +1,9 @@
 # MattBook
 
 Technology/library used: 
-- Vite, ReactJS, Stripe (payment), tailwindCSS, React Hook Form
-- Cloudinary, ExpressJS, Mongoose (MongoDB), JWT
-- Playwright
+- Frontend -- Vite, ReactJS, Stripe (payment), tailwindCSS, React Hook Form
+- Backend -- Cloudinary, ExpressJS, Mongoose (MongoDB), JWT
+- E2E Test -- Playwright
 
 ## Overview
 
