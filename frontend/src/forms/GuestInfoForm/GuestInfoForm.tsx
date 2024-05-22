@@ -39,6 +39,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight } : Props) => {
 
     const checkIn = watch("checkIn");
     const checkOut = watch("checkOut");
+    const numberOfNights = (Math.abs(checkOut.getTime() - checkIn.getTime()) / (1000 * 60 * 60 * 24));
 
     const minDate = new Date();
     const maxDate = new Date();
@@ -68,7 +69,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight } : Props) => {
 
     return (
         <div className="flex flex-col p-4 bg-blue-200 gap-4">
-            <h3 className="text-md font-bold">${pricePerNight}</h3>
+            <h3 className="text-md font-bold">Total: ${pricePerNight * numberOfNights}</h3>
             <form 
                 onSubmit={
                     isLoggedIn ? handleSubmit(onSubmit) : handleSubmit(onSignInClick)
